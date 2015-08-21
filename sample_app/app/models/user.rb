@@ -59,7 +59,7 @@ class User < ActiveRecord::Base
     UserMailer.password_reset(self).deliver_now
   end
 
-  def password_reset_expired
+  def password_reset_expired?
     reset_sent_at < 2.hours.ago
   end
 
