@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MicropostsControllerTest < ActionController::TestCase
   def setup
-    @micropost = micropost(:orange)
+    @micropost = microposts(:orange)
   end
 
   test "should redirect create when not logged in" do
