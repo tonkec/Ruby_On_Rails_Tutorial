@@ -11,7 +11,6 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
   end
 
-
    test "name should be present" do
     @user.name = "     "
     assert_not @user.valid?
@@ -50,7 +49,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-
     test "email addresses should be unique" do
     duplicate_user = @user.dup
     duplicate_user.email = @user.email.upcase
@@ -78,5 +76,15 @@ class UserTest < ActiveSupport::TestCase
     assert_difference 'Micropost.count', -1 do
       @user.destroy
     end
+  end
+
+  test "should follow and unfollow user" do
+    michael = users(:michael)
+    archer = users(:archer)
+    assert_not michael.following?(archer)
+    michael.follow(archer)
+    assert michael.following?(archer)
+    michael.unfollow(archer)
+    assert_not michael.following(archer)
   end
 end
