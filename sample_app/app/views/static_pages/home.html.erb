@@ -1,7 +1,7 @@
 <% provide(:title, "Home") %>
 <% if logged_in? %>
   <div class="row">
-    <aside class="col s1">
+    <aside class="col m4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
@@ -12,24 +12,27 @@
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
-    <div class="col-md-8">
+    <div class="col m8">
       <h3>Micropost Feed</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>
 <% else %>
   <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
-
-    <h2>
-      This is the home page for the
-      <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <h1 class="home-heading">Welcome to the Sample App</h1>
+    <h5>This app allows you to:</h5>
+    <ul> 
+      <li>Create an user</li>
+      <li>Create a micropost</li>
+      <li>Follow other user</li>
+      <li>Unfollow other user</li>
+      <li>Read your status feed</li>
+    </ul>
   </div>
-
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-              'http://rubyonrails.org/' %>
+  <div class="row">
+    <div class="col l10 offset-l1">
+      <%= link_to "Sign up now!", signup_path, class: "btn-submit waves-effect waves-light btn-large" %>
+    </div>
+    
+  </div>
 <% end %>

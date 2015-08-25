@@ -2,11 +2,11 @@
 <h1>Log in</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col s6 offset-s3">
     <%= form_for(:session, url: login_path) do |f| %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      
+      <%= f.label :email, class: "icon_prefix" %>
+      <%= f.email_field :email, class: 'icon_prefix' %>
 
       <%= f.label :password %>
       <%= link_to "(forgot password)", new_password_reset_path %>

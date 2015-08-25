@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+body,html {
+  font-family: "Source Sans Pro";
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.home-heading {
+  font-size: 4.5em;
+  margin-top: 50px;
+}
+
+
+.right {
+  float: right;
+}
+
+.footer-link {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer-anchor {
+  color: #fff;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+      padding: 0 !important;
+    margin: 0 !important;
+    height: 50px;
+}
+
+.brand-logo {
+  margin-left: 20px;
+}
+
+#error_explanation > ul >li {
+  color: #ef5350;
+}
+
+#nav-mobile {
+  margin-right: 20px;
+}
