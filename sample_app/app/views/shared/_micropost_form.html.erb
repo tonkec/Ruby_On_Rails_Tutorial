@@ -1,14 +1,29 @@
-<%= form_for(@micropost, html: { multipart: true }) do |f| %>
-  <%= render "shared/error_messages", object: f.object %>
-  <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost" %>
-  </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
-  <span class="picture">
-     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-  </span>
-<% end %>
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <%= form_for(@micropost, html: { multipart: true }) do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
+        <div class="input-field col s12">
+          <%= f.label :content, for: "textarea1"%>
+          <%= f.text_area :content, id:"textarea1", class: "materialize-textarea" %>
+        </div>
+        <%= f.submit "Post", class: "btn-submit btn-create-micropost waves-effect waves-light btn-large" %>
+        <div class="file-field input-field">
+          <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', 
+           class: "file-path validate", type: "text" %>
+            <div class="btn">
+        <span>File</span>
+        <input type="file" />
+      </div>
+        </div>
 
+        
+      <% end %>
+    </div>
+  </div>
+</div>
+
+ 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {
     var size_in_megabytes = this.files[0].size/1024/1024;

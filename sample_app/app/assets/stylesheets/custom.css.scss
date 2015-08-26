@@ -56,3 +56,38 @@ body,html {
 #nav-mobile {
   margin-right: 20px;
 }
+
+.waves-button-input {
+  border: none !important;
+  background: transparent !important;
+  font-size: 1.5em;
+  font-style: normal
+}
+
+.btn-create-micropost {
+  margin: 10px auto; 
+      height: 40px !important;
+    line-height: 42px !important;
+}
+
+.user_info {
+  margin-top: 25px;
+}
+
+.user-name {
+      font-size: 1.5em;
+    margin: 0 auto;
+    margin-top: 0;
+    line-height: 1.6em;
+}
+
+.user-name-span {
+      font-size: 0.5em;
+    font-weight: 300;
+    line-height: 1.6em;
+    display: inline-block;
+}
+
+.link-to-profile {
+  font-size: 1em;
+}
