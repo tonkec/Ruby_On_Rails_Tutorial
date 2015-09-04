@@ -5,6 +5,7 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:antonija)
+    log_in_as(@user)
   end
   test "profile display" do
     get user_path(@user)

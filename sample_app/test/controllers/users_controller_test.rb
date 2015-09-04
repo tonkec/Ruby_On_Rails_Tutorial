@@ -42,6 +42,11 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to login_url
   end
 
+  test "should redirect show when not logged in" do
+    get :show, id: @user
+    assert_redirected_to login_url
+  end
+
   test "should redirect destroy when not logged in" do 
     assert_no_difference 'User.count' do
       delete :destroy, id: @user
